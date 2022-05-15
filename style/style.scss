@@ -1,0 +1,223 @@
+$colorTextWhite: #FFFFFF;
+$colorTextBlack: #2D3033;
+$colorTextGray: #6C7279;
+$colorHeaderLine: #BABBC5;
+$colorLinkHover: #BABBC5;
+$colorLinkActive: #E71414;
+$colorButtonNormal: #FF4343;
+$colorButtonHover: #E71414;
+$colorButtonActive: #FF4343;
+$colorBackgroundBanner: #252B49;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.banner {
+    background-image: url(../media/banner-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-bottom: 120px;
+    position: relative;
+
+    &__container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 130px;
+        position: relative;
+    
+        &__logo {
+            display: block;
+            width: 181px;
+            height: 26px;
+        }
+    
+        &__picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+    
+        &__list {
+            display: flex;
+        }
+    
+        &__item {
+            list-style: none;
+        }
+    
+        &__link {
+            display: block;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $colorTextWhite;
+            padding: 41px 35px;
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+    
+            &:hover {
+                color: $colorLinkHover;
+                border-bottom: 3px solid $colorLinkHover;
+            }
+    
+            &:active {
+                color: $colorLinkActive;
+                border-bottom: 3px solid $colorLinkActive;
+            }
+        }
+    
+        &::after {
+            content: '';
+            width: 100%;
+            border-bottom: 1px solid $colorHeaderLine;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+
+    &__title {
+        color: $colorTextWhite;
+        font-weight: 900;
+        font-size: 64px;
+        line-height: 75px;
+        text-transform: uppercase;
+        margin-bottom: 31.5px;
+    }
+
+    &__text {
+        color: $colorTextWhite;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 82px;
+    }
+
+    &__btn {
+        color: $colorTextWhite;
+        background-color: $colorButtonNormal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+        border: none;
+        max-width: 370px;
+        width: 100%;
+        padding: 21px 0;
+
+        &:hover {
+            background-color: $colorButtonHover;
+        }
+
+        &:active {
+            background-color: $colorButtonActive;
+            box-shadow: 4px 4px 30px $colorButtonActive;
+        }
+    }
+
+    &::after {
+        content: '';
+        background-color: $colorBackgroundBanner;
+        opacity: 0.8;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    @media (max-width: 1024px) {
+        & {
+            padding-bottom: 126px;
+
+            .header {
+                margin-bottom: 157px;
+
+                &__link {
+                    font-size: 12px;
+                    line-height: 14px;
+                    padding: 41.5px 30px;
+                }
+            }
+
+            &__title {
+                font-size: 48px;
+                line-height: 56px;
+                margin-bottom: 62px;
+            }
+
+            &__text {
+                font-size: 18px;
+                line-height: 21px;
+                margin-bottom: 92px;
+            }
+
+            &__btn {
+                max-width: 314px;
+                padding: 26px 0;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        & {
+            padding-bottom: 52px;
+
+            .header {
+                margin-bottom: 50px;
+
+                &__logo {
+                    width: 102px;
+                    height: 14.5px;
+                }
+
+                &__nav::after {
+                    content: 'url(../media/menu-icon-open.svg)';
+                }
+
+                &__list {
+                    display: none;
+                }
+            }
+
+            &__title {
+                font-size: 36px;
+                line-height: 42px;
+                margin-bottom: 33px;
+            }
+
+            &__text {
+                font-size: 14px;
+                line-height: 16px;
+                margin-bottom: 51px;
+            }
+
+            &__btn {
+                max-width: 280px;
+                padding: 16px 0;
+            }
+        }
+    }
+}

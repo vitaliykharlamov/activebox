@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.banner {
+  background-image: url(../media/banner-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-bottom: 120px;
+  position: relative;
+}
+
+.banner__container {
+  position: relative;
+  z-index: 1;
+}
+
+.banner .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 130px;
+  position: relative;
+}
+
+.banner .header__logo {
+  display: block;
+  width: 181px;
+  height: 26px;
+}
+
+.banner .header__picture {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+}
+
+.banner .header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner .header__item {
+  list-style: none;
+}
+
+.banner .header__link {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 41px 35px;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+}
+
+.banner .header__link:hover {
+  color: #BABBC5;
+  border-bottom: 3px solid #BABBC5;
+}
+
+.banner .header__link:active {
+  color: #E71414;
+  border-bottom: 3px solid #E71414;
+}
+
+.banner .header::after {
+  content: '';
+  width: 100%;
+  border-bottom: 1px solid #BABBC5;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.banner__title {
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 75px;
+  text-transform: uppercase;
+  margin-bottom: 31.5px;
+}
+
+.banner__text {
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 82px;
+}
+
+.banner__btn {
+  color: #FFFFFF;
+  background-color: #FF4343;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  border: none;
+  max-width: 370px;
+  width: 100%;
+  padding: 21px 0;
+}
+
+.banner__btn:hover {
+  background-color: #E71414;
+}
+
+.banner__btn:active {
+  background-color: #FF4343;
+  -webkit-box-shadow: 4px 4px 30px #FF4343;
+          box-shadow: 4px 4px 30px #FF4343;
+}
+
+.banner::after {
+  content: '';
+  background-color: #252B49;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    padding-bottom: 126px;
+  }
+  .banner .header {
+    margin-bottom: 157px;
+  }
+  .banner .header__link {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 41.5px 30px;
+  }
+  .banner__title {
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 62px;
+  }
+  .banner__text {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 92px;
+  }
+  .banner__btn {
+    max-width: 314px;
+    padding: 26px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    padding-bottom: 52px;
+  }
+  .banner .header {
+    margin-bottom: 50px;
+  }
+  .banner .header__logo {
+    width: 102px;
+    height: 14.5px;
+  }
+  .banner .header__nav::after {
+    content: url(../media/menu-icon-open.svg);
+  }
+  .banner .header__list {
+    display: none;
+  }
+  .banner__title {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 33px;
+  }
+  .banner__text {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 51px;
+  }
+  .banner__btn {
+    max-width: 280px;
+    padding: 16px 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
