@@ -1,3 +1,43 @@
+@-webkit-keyframes saturation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes saturation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scaling {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@keyframes scaling {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -78,7 +118,8 @@
   color: #FFFFFF;
   padding: 41px 35px;
   border-bottom: 3px solid transparent;
-  white-space: nowrap;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 .header__link:hover {
@@ -170,6 +211,8 @@
   max-width: 370px;
   width: 100%;
   padding: 26px 0;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
 }
 
 .banner__btn:hover {
@@ -394,11 +437,15 @@
 .work__info:hover {
   color: #FFFFFF;
   background-color: rgba(255, 67, 67, 0.8);
+  -webkit-animation: saturation 0.9s;
+          animation: saturation 0.9s;
 }
 
 .work__info:active {
   color: #FFFFFF;
   background-color: rgba(185, 12, 12, 0.8);
+  -webkit-animation: scaling 0.6s;
+          animation: scaling 0.6s;
 }
 
 @media (max-width: 1024px) {

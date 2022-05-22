@@ -12,6 +12,24 @@ $colorWorkBorder: #FFFFFF;
 $colorWorkHover: rgba(255, 67, 67, 0.8);
 $colorWorkActive: rgba(185, 12, 12, 0.8);
 
+@keyframes saturation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaling {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.8);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -81,7 +99,7 @@ $colorWorkActive: rgba(185, 12, 12, 0.8);
         color: $colorTextWhite;
         padding: 41px 35px;
         border-bottom: 3px solid transparent;
-        white-space: nowrap;
+        transition: 0.2s linear;
 
         &:hover {
             color: $colorLinkHover;
@@ -176,6 +194,7 @@ $colorWorkActive: rgba(185, 12, 12, 0.8);
         max-width: 370px;
         width: 100%;
         padding: 26px 0;
+        transition: 0.3s linear;
 
         &:hover {
             background-color: $colorButtonHover;
@@ -393,11 +412,13 @@ $colorWorkActive: rgba(185, 12, 12, 0.8);
         &:hover {
             color: $colorTextWhite;
             background-color: $colorWorkHover;
+            animation: saturation 0.9s;
         }
 
         &:active {
             color: $colorTextWhite;
             background-color: $colorWorkActive;
+            animation: scaling 0.6s;
         }
     }
 
