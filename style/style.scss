@@ -471,6 +471,12 @@ $colorSocialActive: #FF4343;
         column-gap: 30px;
     }
 
+    &__item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 38px;
+    }
+
     &__picture {
         position: relative;
         margin-bottom: 30px;
@@ -489,10 +495,6 @@ $colorSocialActive: #FF4343;
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
-
-    &__info {
-        margin-bottom: 38px;
     }
 
     &__name {
@@ -522,6 +524,7 @@ $colorSocialActive: #FF4343;
     &__social {
         display: flex;
         column-gap: 6px;
+        margin-top: auto;
     }
 
     &__link {
@@ -552,12 +555,12 @@ $colorSocialActive: #FF4343;
         & {
             padding: 78px 0;
 
-            &__picture {
-                margin-bottom: 25px;
+            &__item {
+                row-gap: 39px;
             }
     
-            &__info {
-                margin-bottom: 39px;
+            &__picture {
+                margin-bottom: 25px;
             }
     
             &__name {
@@ -575,16 +578,17 @@ $colorSocialActive: #FF4343;
                 font-size: 14px;
                 line-height: 16px;
             }
-    
-            &__social {
-                column-gap: 5px;
-            }
-    
+        }
+    }
+
+    @media (min-width:768px) and (max-width: 1024px){
+        & {
             &__link {
                 width: 33px;
                 height: 33px;
             }
         }
+        
     }
 
     @media (max-width: 767px) {
@@ -596,17 +600,8 @@ $colorSocialActive: #FF4343;
                 row-gap: 49.5px;
             }
 
-            &__info {
-                margin-bottom: 55px;
-            }
-
-            &__social {
-                column-gap: 6px;
-            }
-
-            &__link {
-                width: 39px;
-                height: 39px;
+            &__item {
+                row-gap: 55px;
             }
 
             &__position {
