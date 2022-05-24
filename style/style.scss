@@ -14,11 +14,13 @@ $colorWorkBorder: #FFFFFF;
 $colorWorkHover: rgba(255, 67, 67, 0.8);
 $colorWorkActive: rgba(185, 12, 12, 0.8);
 $colorSocialHover: #FF4343;
-$colorSocialActive: #5C3249;
+$colorSocialActive: #E71414;
 $colorBackgroundTestimonials: #5C3249;
 $colorBackgroundFooterTop: #353C65;
 $colorBackgroundFooterBottom: #2C3154;
 $colorTextFooterBottom: #808080;
+$colorSwiperActive: #7E5D6F;
+$colorSwipeNoneActive: #FFFFFF;
 
 @keyframes saturation {
     from {
@@ -690,6 +692,56 @@ $colorTextFooterBottom: #808080;
     }
 }
 
+.swiper {
+    &-wrapper {
+        position: static;
+        margin-bottom: 31px;
+    }
+    
+    &-pagination {
+        position: static;
+    
+        &-bullet {
+            width: 14px;
+            height: 14px;
+            background-color: $colorSwipeNoneActive;
+            border: 1px solid $colorSwiperActive;
+            opacity: 1;
+
+            &-active {
+                background-color: $colorSwiperActive;
+            }
+        }
+    }
+
+    &-horizontal>&-pagination-bullets &-pagination-bullet, &-pagination-horizontal &-pagination-bullets &-pagination-bullet {
+        margin: 0 12.5px;
+    }
+
+    @media (max-width: 1024px){
+        &-wrapper {
+            margin-bottom: 24px;
+        }
+
+        &-pagination {
+            &-bullet {
+                width: 9.5px;
+                height: 9.5px;
+            }
+        }
+    }
+
+    @media (max-width: 767px){
+        &-wrapper {
+            margin-bottom: 23px;
+        }
+
+        &-horizontal>&-pagination-bullets &-pagination-bullet, &-pagination-horizontal &-pagination-bullets &-pagination-bullet {
+            margin: 0 10px;
+        }
+    }
+}
+
 .download {
     padding: 114px 0;
 
@@ -911,7 +963,14 @@ $colorTextFooterBottom: #808080;
 
         &__container {
             grid-template-columns: 1fr;
-            row-gap: 60px;
+        }
+
+        &__address {
+            margin-bottom: 69px;
+        }
+
+        &__social {
+            margin-bottom: 59px;
         }
 
         &__title {

@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style/style.css">
     <title>Activebox</title>
 </head>
@@ -283,16 +284,66 @@
         </section>
 
         <section class="testimonials">
-            <div class="testimonials__wrap">
-                <div class="testimonials__picture">
-                    <img class="testimonials__img" src="media/testimonials-1.jpg" alt="testimonials-1">
+            <div class="swiper testimonials__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonials__wrap">
+                            <div class="testimonials__picture">
+                                <img class="testimonials__img" src="media/testimonials-1.jpg" alt="testimonials-1">
+                            </div>
+                            <div class="testimonials__info">
+                                <h2 class="testimonials__title">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</h2>
+                                <p class="testimonials__text">Susan Sims, Interaction Designer at XYZ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonials__wrap">
+                            <div class="testimonials__picture">
+                                <img class="testimonials__img" src="media/testimonials-2.jpg" alt="testimonials-2">
+                            </div>
+                            <div class="testimonials__info">
+                                <h2 class="testimonials__title">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</h2>
+                                <p class="testimonials__text">Susan Sims, Interaction Designer at XYZ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonials__wrap">
+                            <div class="testimonials__picture">
+                                <img class="testimonials__img" src="media/testimonials-3.jpg" alt="testimonials-3">
+                            </div>
+                            <div class="testimonials__info">
+                                <h2 class="testimonials__title">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</h2>
+                                <p class="testimonials__text">Susan Sims, Interaction Designer at XYZ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonials__wrap">
+                            <div class="testimonials__picture">
+                                <img class="testimonials__img" src="media/testimonials-4.jpg" alt="testimonials-4">
+                            </div>
+                            <div class="testimonials__info">
+                                <h2 class="testimonials__title">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</h2>
+                                <p class="testimonials__text">Susan Sims, Interaction Designer at XYZ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonials__wrap">
+                            <div class="testimonials__picture">
+                                <img class="testimonials__img" src="media/testimonials-5.jpg" alt="testimonials-5">
+                            </div>
+                            <div class="testimonials__info">
+                                <h2 class="testimonials__title">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</h2>
+                                <p class="testimonials__text">Susan Sims, Interaction Designer at XYZ</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonials__info">
-                    <h2 class="testimonials__title">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</h2>
-                    <p class="testimonials__text">Susan Sims, Interaction Designer at XYZ</p>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="testimonials__slider"></div>
         </section>
 
         <section class="download">
@@ -343,5 +394,16 @@
             <p class="footer__info">Copyright © 2015 ActiveBox. All Rights Reserved Made with <span class="footer__name">by Kamal Chaneman</span></p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".testimonials__swiper", {
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+        });
+    </script>
 </body>
 </html>
