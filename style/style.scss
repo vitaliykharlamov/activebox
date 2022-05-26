@@ -86,6 +86,20 @@ $colorSwipeNoneActive: #FFFFFF;
         display: none;
     }
 
+    &__img-close {
+        display: none;
+    }
+
+    &__btn.open {
+        .header__img-open {
+            display: none;
+        }
+
+        .header__img-close {
+            display: block;
+        }
+    }
+
     &__list {
         display: flex;
 

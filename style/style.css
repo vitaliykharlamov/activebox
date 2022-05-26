@@ -81,6 +81,18 @@
   display: none;
 }
 
+.header__img-close {
+  display: none;
+}
+
+.header__btn.open .header__img-open {
+  display: none;
+}
+
+.header__btn.open .header__img-close {
+  display: block;
+}
+
 .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
