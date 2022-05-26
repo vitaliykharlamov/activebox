@@ -178,7 +178,8 @@
     display: none;
   }
   .header__link {
-    padding: 0 0 55px 15px;
+    padding: 0 15px 15px 15px;
+    margin-bottom: 40px;
   }
 }
 
