@@ -38,50 +38,6 @@
   }
 }
 
-@-webkit-keyframes pushing-out {
-  from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes pushing-out {
-  from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes pushing-in {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-}
-
-@keyframes pushing-in {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -234,24 +190,29 @@
             flex-direction: column;
     left: 0;
     top: 56px;
-    height: 100vh;
+    height: calc(100vh - 56px);
     width: 100%;
     background-color: rgba(44, 49, 84, 0.5);
-    padding-top: 55px;
-    -webkit-transform: translateY(calc(-100% - 56px));
-            transform: translateY(calc(-100% - 56px));
-    -webkit-animation: pushing-in .6s linear;
-            animation: pushing-in .6s linear;
+    padding-top: 32.5px;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform .6s linear;
+    transition: -webkit-transform .6s linear;
+    transition: transform .6s linear;
+    transition: transform .6s linear, -webkit-transform .6s linear;
   }
   .header__list.open {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation: pushing-out .6s linear;
-            animation: pushing-out .6s linear;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: -webkit-transform .6s linear;
+    transition: -webkit-transform .6s linear;
+    transition: transform .6s linear;
+    transition: transform .6s linear, -webkit-transform .6s linear;
   }
   .header__link {
-    padding: 0 15px 15px 15px;
-    margin-bottom: 40px;
+    font-size: 13px;
+    line-height: 15px;
+    padding: 22.5px 15px;
   }
 }
 
