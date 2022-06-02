@@ -165,8 +165,8 @@
   }
   .header__img-open {
     display: block;
-    -webkit-animation: emergence .6s linear;
-            animation: emergence .6s linear;
+    -webkit-animation: emergence .4s linear;
+            animation: emergence .4s linear;
   }
   .header__img-close {
     display: none;
@@ -176,8 +176,8 @@
   }
   .header__btn.open .header__img-close {
     display: block;
-    -webkit-animation: emergence .6s linear;
-            animation: emergence .6s linear;
+    -webkit-animation: emergence .4s linear;
+            animation: emergence .4s linear;
   }
   .header__list {
     position: fixed;
@@ -196,18 +196,18 @@
     padding-top: 32.5px;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
-    -webkit-transition: -webkit-transform .6s linear;
-    transition: -webkit-transform .6s linear;
-    transition: transform .6s linear;
-    transition: transform .6s linear, -webkit-transform .6s linear;
+    -webkit-transition: -webkit-transform .4s linear;
+    transition: -webkit-transform .4s linear;
+    transition: transform .4s linear;
+    transition: transform .4s linear, -webkit-transform .4s linear;
   }
   .header__list.open {
     -webkit-transform: translateX(0);
             transform: translateX(0);
-    -webkit-transition: -webkit-transform .6s linear;
-    transition: -webkit-transform .6s linear;
-    transition: transform .6s linear;
-    transition: transform .6s linear, -webkit-transform .6s linear;
+    -webkit-transition: -webkit-transform .4s linear;
+    transition: -webkit-transform .4s linear;
+    transition: transform .4s linear;
+    transition: transform .4s linear, -webkit-transform .4s linear;
   }
   .header__link {
     font-size: 13px;
